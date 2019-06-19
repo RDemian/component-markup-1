@@ -1,0 +1,98 @@
+.main-nav {
+    &__list {
+        display: flex;
+
+        @media (max-width: $tablet-width) {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: rem(50);
+        }
+
+        @media (max-width: $mobile-width) {
+
+        }
+    }
+
+    &__item {
+        margin-right: rem(50);
+        line-height: 1;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        @media (max-width: $tablet-width) {
+            margin-right: 0;
+            margin-bottom: rem(30);
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__link {
+        padding: rem(18) 0 rem(10);
+        border-bottom: rem(4) solid transparent;
+
+        &:hover {
+            border-bottom: rem(4) solid $color-first-1;
+        }
+
+        &:active {
+            border-bottom: rem(4) solid $color-first-3;
+        }
+
+        @media (max-width: $tablet-width) {
+            font-size: rem(24);
+        }
+
+        @media (max-width: $mobile-width) {
+            font-size: rem(20);
+        }
+    }
+}
+/* style for WordPress */
+.main-nav__list li {
+    margin-right: rem(50);
+    line-height: 1;    
+}
+
+.main-nav__list li:last-of-type {
+    margin-right: 0;
+}
+
+@media (max-width: $tablet-width) {
+    .main-nav__list li {
+        margin-right: 0;
+        margin-bottom: rem(30);
+    }
+
+    .main-nav__list li:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.main-nav__list a {
+    padding: rem(18) 0 rem(10);
+    border-bottom: rem(4) solid transparent;
+}
+.main-nav__list a:hover {
+    border-bottom: rem(4) solid $color-first-1;
+}
+
+.main-nav__list a:active {
+    border-bottom: rem(4) solid $color-first-3;
+}
+
+@media (max-width: $tablet-width) {
+    .main-nav__list a {
+        font-size: rem(24);
+    }
+}
+
+@media (max-width: $mobile-width) {
+    .main-nav__list a {
+        font-size: rem(20);
+    }
+}

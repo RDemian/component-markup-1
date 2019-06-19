@@ -1,0 +1,30 @@
+.footer {
+    display: flex;
+
+    @media (max-width: $mobile-width) {
+        &__logo, &__social {
+            margin-bottom: rem(27);
+        }
+    }
+
+    &_mark {
+        border-top: 2px solid $color-muted;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: rem(104);
+
+        @media (max-width: $mobile-width) {
+            flex-direction: column;
+            padding: rem(30);
+            height: auto;
+        }
+    }
+
+    &__copyright {
+        color: #4E4E4E;
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "items": [
+      {
+        "img-src": "assets/img/what-wikiworks/bd-icon.svg",
+        "text": "База знаний"
+      },
+      {
+        "img-src": "assets/img/what-wikiworks/attestation-icon.svg",
+        "text": "Аттестация сотрудников"
+      },
+      {
+        "img-src": "assets/img/what-wikiworks/card-icon.svg",
+        "text": "Финансовая мотивация"
+      }
+    ]
+}

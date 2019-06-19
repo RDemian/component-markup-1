@@ -1,0 +1,36 @@
+<section class="comments {{className}}">
+    
+    <div class="comments__count">53 комментария</div>
+    <div class="comments__social">
+        <div class="comments__social-desc">
+            Войдите через социальную сеть
+        </div>
+
+        {{> social}}
+    </div>
+    <form class="comments__new" action="">
+            
+        <div class="comments__new-avatar">
+            <input class="js-img-upload hidden-ctrl ava" id="uploadAvatar" type="file" accept="image/jpeg, image/png, image/gif">
+            <label class="comments__new-avatar-label" for="uploadAvatar">
+                <img class="comments__new-avatar-img" src="assets/img/comments/ava-empty.svg" alt="">
+            </label>
+        </div>
+        <textarea class="comments__new-text requiredText" name="comment-text" id="commentText"></textarea>
+    </form>
+    <ul class="comments__list">
+        {{#each comments.items}}
+            <li class="comments__item">
+                <div class="comments__pic">
+                    <img class="comments__avatar" src="{{avatar}}" alt=""></img>
+                </div>
+                <div class="comments__head">
+                    <div class="comments__author">{{author}}</div>
+                    <div class="comments__date">{{date}}</div>
+                </div>
+                <div class="comments__text">{{text}}</div>
+            </li>
+        {{/each}}
+    </ul>
+    
+</section>

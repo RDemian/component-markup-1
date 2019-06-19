@@ -1,0 +1,40 @@
+<section class="modules {{className}}">
+    <div class="modules__content content">
+        <h2 class="modules__title title">Дополнительные модули</h2>
+        <div class="modules__subtitle">Доступны без оплаты на бесплатном тарифе, на остальных тарифных планах - подключаются и оплачиваются отдельно</div>
+
+        <ul class="modules__list js-modules-slider">
+            {{#each modules.items}}
+                <li class="modules__item">
+                    <div class="modules__name">{{name}}</div>
+                    <div class="modules__inner">
+                        <div class="modules__cost">
+                            <div class="modules__cost-sum">{{cost}}</div>
+                            <div class="modules__cost-period">в месяц</div>
+                        </div>
+                        <img src="{{img-src}}" alt="" class="modules__img">
+                        <a class="modules__desc js-modal-open" href="#_" data-target="modul-desc-{{@index}}">{{desc}}</a>
+                    </div>
+                    <!-- Модалка с описанием -->
+                    <div class="modal modul-desc" id="modul-desc-{{@index}}">
+                        <div class="modal__wrap"></div>
+                        <div class="modal__block modul-desc__content">
+                            <button class="modal__cross js-modal-close">×</button>
+                            
+                            <h3 class="modul-desc__title">{{name}}</h3>
+                            <div class="modul-desc__inner">
+                                <div class="modul-desc__paragraf">{{first-desc}}</div>
+                                <div class="modul-desc__picture">
+                                    <img src="{{img-desc}}" alt="">
+                                </div>
+                                <div class="modul-desc__paragraf">{{second-desc}}</div>
+                                <div class="modul-desc__paragraf">{{third-desc}}</div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</section>

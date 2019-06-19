@@ -1,0 +1,27 @@
+// colors
+$theme-color: #ECFAFD;
+
+$color-first-1: #FFD80B;
+$color-first-2: #FBDD43;
+$color-first-3: #FCE369;
+$color-second-1: #57AFFF;
+$color-second-2: #73BCFF;
+$color-second-3: #80C1FF; 
+
+$color-info: #7E7E7E;
+$color-muted:#DADADA;
+$color-danger: #FE2E00;
+$color-warning: #FFB41D;
+
+$text-first: #000;
+$text-second: #fff;
+
+
+// fonts
+
+// media - в global.scss
+
+@function rem($num) {
+    $strip-unit: $num / ($num * 0 + 1);
+    @return $strip-unit / 16 * 1rem;
+}

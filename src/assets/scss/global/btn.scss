@@ -1,0 +1,56 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    padding: rem(16) rem(41) rem(17);
+    font-size: rem(18);
+    line-height: 1;
+    border-radius: rem(30);
+    cursor: pointer;
+
+    @media (max-width: $mobile-width) {
+        padding: rem(14) rem(25) rem(15);
+        font-size: rem(16);
+    }
+
+    &_first {
+        border: 2px solid $color-first-1;
+
+        &:hover {
+            background-color: $color-first-2;
+        }
+    
+        &:active {
+            background-color: $color-first-3;
+        }
+    }
+
+    &_second {
+        border: 2px solid $color-second-1;
+
+        &:hover {
+            background-color: $color-second-2;
+        }
+    
+        &:active {
+            background-color: $color-second-3;
+        }
+    }
+
+    &_first-fill {
+        background-color: $color-first-1;
+    }
+
+    &_second-fill {
+        color: $text-second;
+        background-color: $color-second-1;
+    }
+
+    &_large {
+        min-width: rem(300);
+
+        @media (max-width: $mobile-width) {
+            min-width: rem(250);
+        }
+    }
+
+}

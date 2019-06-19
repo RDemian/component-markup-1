@@ -1,0 +1,130 @@
+<div class="modal autorization {{className}}" id="autorization">
+    <div class="modal__wrap"></div>
+
+    <div class="modal__block autorization__content">
+        <button class="modal__cross js-modal-close">×</button>
+        
+        <h3 class="autorization__title">Авторизация</h3>
+        
+        <div class="autorization__tab-head">
+            <div class="autorization__tab-name tab-active" data-tabid="login-tab">Войти</div>
+            <div class="autorization__tab-name" data-tabid="reg-tab">Регистрация</div>
+        </div>
+
+        <div class="autorization__tab-content">
+            <!-- Вкладка входа -->
+            <div class="autorization__tab" data-tab="login-tab">
+                <!-- Форма входа -->
+                <form action="" class="form js-validate" id="login-form" data-display-elem="login-form">
+                    <div class="form__content">
+                        <div class="form__group">
+                            <input type="email" class="form__control email" id="login-form-email" name="email" placeholder="E-mail">
+                        </div>
+                        <div class="form__group">
+                            <div class="form__display-pass" data-pass-target="login-form-password">^</div>
+                            <input type="password" class="form__control pass" id="login-form-password" name="password" placeholder="Пароль">
+                        </div>
+                        <div class="form__group">
+                            <button type="submit" class="autorization__btn btn btn_first btn_first-fill" data-target="portal">Войти</button>
+                        </div>
+                        <div class="form__group">
+                            <button type="button" class="autorization__btn" data-display-target="restore-form">Забыли пароль</button>
+                        </div>
+                    </div>
+                </form>
+                <!-- Форма восстановления пароля -->
+                <form action="" class="form js-validate d-none" id="restore-form" data-display-elem="restore-form">
+                    <div class="form__content">
+                        <div class="form__group">
+                            <input type="email" class="form__control email" id="restore-form-email" name="email" placeholder="E-mail">
+                        </div>
+                        <div class="form__group">
+                            <button type="button" class="autorization__btn btn btn_first btn_first-fill" data-display-target="send-message">Восстановить</button>
+                        </div>
+                        <div class="form__group">
+                            <button type="button" class="autorization__btn" data-display-target="login-form">Помню пароль</button>
+                        </div>
+                    </div>
+                </form>
+                <!-- Сообщение об отправке -->
+                <div class="autorization__send-message d-none" data-display-elem="send-message">
+                    <div>Восстановление пароля</div>
+                    <div>Ссылка для восстановления пароля отправлена на ваш e-mail. Проверьте почту</div>
+                </div>
+                <!-- Форма смены пароля -->
+                <form action="" class="form js-validate d-none" id="change-password-form">
+                    <div class="form__content">
+                        <div class="form__group">
+                            <div class="form__display-pass" data-pass-target="change-form-new-password">^</div>
+                            <input type="password" class="form__control pass" id="change-form-new-password" name="password" placeholder="Новый пароль">
+                        </div>
+                        <div class="form__group">
+                            <div class="form__display-pass" data-pass-target="change-form-old-password">^</div>
+                            <input type="password" class="form__control pass" id="change-form-old-password" name="password" placeholder="Старый пароль">
+                        </div>
+                        <div class="form__group">
+                            <button type="submit" class="form__btn btn btn_first btn_first-fill">Изменить пароль</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Вкладка регистрации -->
+            <div class="autorization__tab d-none" data-tab="reg-tab">
+                <!-- Форма регистрации -->
+                <form action="" class="form js-validate" id="reg-form">
+                    <div class="form__content">
+                        <div class="form__group">
+                            <input type="text" class="form__control name" id="reg-form-name" name="name" placeholder="Ваше имя">
+                        </div>
+                        <div class="form__group">
+                            <input type="text" class="form__control surname" id="reg-form-surname" name="surname" placeholder="Ваша фамилия">
+                        </div>
+                        <div class="form__group">
+                            <input type="text" class="form__control company" id="reg-form-company" name="company" placeholder="Название компании">
+                        </div>
+                        <div class="form__group">
+                            <input type="tel" class="form__control phone" id="reg-form-phone" name="phone" placeholder="Телефон">
+                        </div>
+                        <div class="form__group">
+                            <input type="email" class="form__control email" id="reg-form-email" name="email" placeholder="E-mail">
+                        </div>
+                        <div class="autorization__terms">
+                            Нажимая на кнопку “Зарегистрироваться”, я принимаю условия 
+                            <a class="autorization__link" src="#_">Политики конфиденциальности</a>
+                            и даю согласие на обработку моих персональных данных.
+                        </div>
+                        <div class="form__group">
+                            <button type="submit" class="autorization__btn btn btn_first btn_first-fill">Зарегистрироваться</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal portal {{className}}" id="portal">
+    <div class="modal__wrap"></div>
+
+    <div class="modal__block portal__content">
+        <button class="modal__cross js-modal-close">×</button>
+        
+        <h3 class="portal__title">Выберите портал:</h3>
+        <ul class="portal__list">
+            <li class="portal__item">
+                <a href="#_" class="btn btn_second portal__link">Портал WikiWorks</a>
+            </li>
+            <li class="portal__item">
+                <a href="#_" class="btn btn_second portal__link">Тестовый портал</a>
+            </li>
+            <li class="portal__item">
+                <a href="#_" class="btn btn_second portal__link">Разработка бэк</a>
+            </li>
+            <li class="portal__item">
+                <a href="#_" class="btn btn_second portal__link">Фронт разработка Фронт разработкаФронт разработкаФронт разработкаФронт разработкаФронт разработка</a>
+            </li>
+        </ul>
+        <button type="button" class="btn btn_first portal__btn">Отмена</button>
+    </div>
+</div>

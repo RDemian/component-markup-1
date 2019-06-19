@@ -1,0 +1,20 @@
+{
+    "items": [
+      {
+        "img-src": "assets/img/why-wikiworks/education.svg",
+        "text": "Обучение"
+      },
+      {
+        "img-src": "assets/img/why-wikiworks/inspect.svg",
+        "text": "Контроль"
+      },
+      {
+        "img-src": "assets/img/why-wikiworks/motivation.svg",
+        "text": "Мотивация"
+      },
+      {
+        "img-src": "assets/img/why-wikiworks/progress.svg",
+        "text": "Развитие"
+      }
+    ]
+}

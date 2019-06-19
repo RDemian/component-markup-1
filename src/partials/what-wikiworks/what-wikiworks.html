@@ -1,0 +1,49 @@
+<section class="what-wikiworks {{className}}">
+    <div class="content">
+        <h2 class="what-wikiworks__title title">Как работает <b>W<span class="text-hlt">i</span>kiWorks</b></h2>
+
+        <div class="what-wikiworks__short short">
+            <ul class="short__list">
+                {{#each what-wikiworks-short.items}}
+                    <li class="short__item">
+                        <div class="short__item-pic">
+                            <img src="{{img-src}}" alt="" class="short__item-img">
+                        </div>
+                        <div class="short__item-text">{{text}}</div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+        
+        <div class="what-wikiworks__detail detail">
+            <ul class="detail__list">
+                {{#each what-wikiworks-detail.items}}
+                    <li class="detail__item">
+                        <div class="detail__item-pic">
+                            <img src="{{img-src-osn}}" width="476" height="354" alt="" class="detail__item-img detail__item-img_osn">
+                            <img src="{{img-src-num}}" width="101" height="144" alt="" class="detail__item-img detail__item-img_num">
+                            <img src="{{img-src-small}}" width="282" height="129" alt="" class="detail__item-img detail__item-img_small">
+                        </div>
+                        <div class="detail__item-desc">
+                            <div class="detail__item-title">{{title}}</div>
+                            <div class="detail__item-text">{{text}}</div>
+                            <a class="btn btn_second btn_large detail__item-btn" href="#_" data-detail={{detail}}>Узнать больше</a>
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+        
+        <div class="what-wikiworks__more more">
+            <h3 class="more__title">а еще ...</h3>
+            <ul class="more__list js-more-slider">
+                {{#each what-wikiworks-more.items}}
+                    <li class="more__item {{#if coming-soon}}more__item_soon{{/if}}">
+                        <div class="more__item-title">{{title}}</div>
+                        <div class="more__item-text">{{text}}</div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,28 @@
+{
+    "items": [
+      {
+        "img-src-num": "assets/img/what-wikiworks/one.svg",
+        "img-src-osn": "assets/img/what-wikiworks/one-osn.jpg",
+        "img-src-small": "assets/img/what-wikiworks/one-small.png",
+        "detail": "bd",
+        "title": "База знаний с регламентами",
+        "text": "Опишите бизнес-процессы в виде регламентов и добавьте в систему. Больше не нужно быть нянькой новым и старым сотрудникам. Давайте доступ к материалам базы согласно иерархии компании. Каждый сотрудник изучит все, что касается его обязанностей и без труда вольется в коллектив."
+      },
+      {
+        "img-src-num": "assets/img/what-wikiworks/two.svg",
+        "img-src-osn": "assets/img/what-wikiworks/two-osn.png",
+        "img-src-small": "assets/img/what-wikiworks/two-small.png",
+        "detail": "attestation",
+        "title": "Аттестация на знание правил",
+        "text": "У вас уже могут быть прописаны правила. Но часто сотрудники плохо понимают суть регламентов или вообще не читают их. С WikiWorks сотрудники действительно изучат правила и у них не будет проблем в дальнейшей работе благодаря модулю аттестации. К каждому регламенту вы составляете тест. Сдал\u00a0тест\u00a0—\u00a0можешь работать."
+      },
+      {
+        "img-src-num": "assets/img/what-wikiworks/three.svg",
+        "img-src-osn": "assets/img/what-wikiworks/three-osn.png",
+        "img-src-small": "assets/img/what-wikiworks/three-small.png",
+        "detail": "motivation",
+        "title": "Прозрачная финансовая мотивация",
+        "text": "Зарплаты, премии и штрафы — все это можно вести на портале WikiWorks. Оформите правила денежной мотивации. Для каждого регламента составьте четкий список возможных нарушений и штрафов. Пусть все сотрудники узнают и примут правила игры. И руководство и персонал всегда в курсе, за что и в каком размере выписаны штрафы или премии."
+      }
+    ]
+}

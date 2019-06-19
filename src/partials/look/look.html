@@ -1,0 +1,40 @@
+<section class="look {{className}}">
+    <div class="look__content content">
+        <h2 class="what-wikiworks__title title">Как выглядит работа в <b>W<span class="text-hlt">i</span>kiWorks</b></h2>
+
+        <ul class="look__nav js-lookNav-slider">
+            {{#each look-nav.items}}
+                <li class="look__nav-item">
+                    <input type="radio" id="look-nav-ctrl-{{@index}}" name="look-nav-ctrl" class="look__nav-ctrl hidden-ctrl js-filter" data-group={{@index}}
+                    {{#unless @index}}
+                        checked="checked"
+                    {{/unless}}>
+                    <label for="look-nav-ctrl-{{@index}}" class="look__nav-label">{{title}}</label>
+                </li>
+            {{/each}}
+        </ul>
+    
+        <div class="look-slider">
+            <div class="look-slider__btn look-slider__btn_prev">
+                <svg width="21" height="35" viewBox="0 0 21 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.46 0.95874L1.99999 17.6218L19.46 34.2848" stroke-width="2"/>
+                </svg>
+            </div>
+            <div class="look-slider__btn look-slider__btn_next">
+                <svg width="21" height="36" viewBox="0 0 21 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.45996 34.7993L18.9199 18.1363L1.45996 1.47324" stroke-width="2"/>
+                </svg>
+            </div>
+            <ul class="look-slider__list js-look-slider">
+                {{#each look-slider.items}}
+                    <li class="look-slider__slide" data-group={{group}}> 
+                        <div class="look-slider__picture">
+                            <img class="look-slider__img" src="{{img-src}}" alt="">
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+            
+        </div>
+    </div>
+</section>

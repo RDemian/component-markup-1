@@ -1,0 +1,27 @@
+.user-nav {
+
+    @media (max-width: $tablet-width) {
+        margin-bottom: rem(60);
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        margin-right: rem(40);
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    &__lang {
+        line-height: 1;
+
+        &:hover {
+            color: $color-info;
+        }
+    }
+}

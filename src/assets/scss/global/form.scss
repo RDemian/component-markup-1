@@ -1,0 +1,66 @@
+
+.form {
+  &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  &__control {
+      padding: 0 rem(24);
+      width: 100%;
+      height: rem(64);
+      font-size: rem(18);
+      line-height: 1;
+      letter-spacing: 1px;
+      border: 2px solid $color-muted;
+      border-radius: rem(16);
+
+      &:focus {
+          border: 2px solid $color-first-1;
+      }
+  }
+
+  &__group {
+      position: relative;
+      margin-bottom: rem(32);
+      width: 100%;
+
+      &:last-of-type {
+          margin-bottom: 0;
+      }
+  }
+
+  &__display-pass {
+      position: absolute;
+      top: rem(24);
+      right: rem(10);
+      width: rem(34);
+      height: rem(16);
+      font-size: 0;
+      background-image: url('../img/eye-icon.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      cursor: pointer;
+
+      &_hide {
+        top: rem(27);
+        background-image: url('../img/close-eye-icon.svg');
+      }
+  }
+}
+
+input.form__error {
+  border: 2px solid $color-danger;
+
+  &:focus {
+    border: 2px solid $color-danger;
+  }
+}
+
+div.form__error {
+  position: absolute;
+  padding: rem(2) rem(10) 0;
+  font-size: rem(13);
+  color: $color-danger;
+}

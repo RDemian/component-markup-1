@@ -1,0 +1,40 @@
+{
+    "items": [
+        {
+            "name": "Бесплатный",
+            "users": "до 5",
+            "size": "50 мб",
+            "lastCost": "",
+            "icon-src": "assets/img/tarif/ok-icon.svg",
+            "period": "",
+            "cost": "бесплатно"
+        },
+        {
+            "name": "Начальный",
+            "users": "до 20",
+            "size": "2 гб",
+            "lastCost": "",
+            "icon-src": "assets/img/tarif/ok-icon.svg",
+            "period": "в месяц",
+            "cost": "1 990 ₽"
+        },
+        {
+            "name": "Стандартный",
+            "users": "до 50",
+            "size": "5 гб",
+            "lastCost": "6 990 ₽",
+            "icon-src": "assets/img/tarif/ok-icon.svg",
+            "period": "в месяц",
+            "cost": "4 990 ₽"
+        },
+        {
+            "name": "Продвинутый",
+            "users": "неограниченно",
+            "size": "неограниченно",
+            "lastCost": "",
+            "icon-src": "assets/img/tarif/ok-icon.svg",
+            "period": "",
+            "cost": "по запросу"
+        }
+    ]    
+}

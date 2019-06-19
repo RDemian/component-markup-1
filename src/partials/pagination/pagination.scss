@@ -1,0 +1,19 @@
+.pagination {
+    display: flex;
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: rem(52);
+        height: rem(52);
+        font-size: rem(16);
+        line-height: 0.8;
+        white-space: nowrap;
+        border: 2px solid transparent;
+        border-radius: 50%;
+
+        &_active {
+            border: 2px solid $color-first-1;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+<section class="blog-page {{className}}">
+    <div class="content">
+        <h2 class="blog-page__title title">Блог</h2>
+
+        <ul class="blog-page__list">
+            {{#each blog-page.items}}
+                <li class="blog-page__item">
+                    {{> blog-card title=title date=date text=text}}
+                </li>
+            {{/each}}
+        </ul>
+        {{> pagination}}
+    </div>
+</section>

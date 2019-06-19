@@ -1,0 +1,85 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1050;
+    
+    &__wrap {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(21, 21, 21, 0.6);
+    }
+
+    &__block {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: rem(20) auto;
+        max-height: 100%;
+        background-color: #fff;
+        border-radius: rem(16);
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        @media (max-width: $mobile-width) {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 0;
+        }
+    }
+
+    &__spinner {
+        position: absolute;
+        top: 0;
+        left: 0;
+  
+        display: none;
+        width: 100%;
+        height: 100%;
+  
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+  
+    &__spinner--visible {
+        display: block;
+    }
+
+    &__spinner-img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        user-select: none;
+    }
+
+    &__cross {
+        position: absolute;
+        top: rem(18);
+        right: rem(18);
+        font-size: 0;
+        width: rem(15);
+        height: rem(15);
+        background-image: url('../img/cross.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+    }
+
+    &__open {
+        overflow: hidden;
+    }
+
+    &__spinner {
+        position: absolute;
+    }
+
+    &__spinner-img {
+        height: rem(49);
+        width: rem(49);
+    }
+}

@@ -1,0 +1,196 @@
+@keyframes Flow {
+    0% {
+        z-index: 1;
+        background-size: 0 0;
+    }
+    80% {
+        z-index: 1;
+        font-size: 0;
+        background-size: 160% 160%;
+    }
+    100% {
+        z-index: 1;
+        font-size: rem(14);
+        background-size: 200% 200%;
+    }
+}
+
+.modules {
+    display: flex;
+    padding-top: rem(65);
+    background-color: $theme-color;
+    border-bottom: 2px solid $color-muted;
+
+    &__content {
+        padding-bottom: rem(49);
+        background-image: url("../img/modules/m-bg-left.svg"), url("../img/modules/m-bg-right.svg");
+        background-repeat: no-repeat;
+        background-position: bottom -2px left rem(25), bottom -2px right rem(44);
+        background-size: rem(206) rem(169), rem(174) rem(103);
+
+        @media (max-width: $tablet-width) {
+            background-position: bottom -2px left rem(-75), bottom -2px right rem(-40);
+        }
+
+        @media (max-width: $mobile-width) {
+            background-image: none;
+        }
+    }
+
+    &__title {
+        margin-bottom: rem(30);
+
+        @media (max-width: $tablet-width) {
+            letter-spacing: -0.1px;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: rem(60);
+        font-size: rem(20);
+        line-height: 1.4;
+        width: 100%;
+        text-align: center;
+
+        @media (max-width: $tablet-width) {
+            margin-bottom: rem(25);
+            font-size: rem(16);
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+
+        width: 100%;
+        padding-bottom: rem(10);
+        margin: 0 rem(2);
+
+        @media (max-width: $tablet-width) {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            margin: 0;
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: rem(30) rem(12) rem(12) rem(30);
+        background-color: #fff;
+        border-radius: rem(16);
+        width: rem(280);
+        height: rem(241);
+        cursor: pointer;
+
+        @media (max-width: $tablet-width) {
+            margin: rem(10);
+        }
+
+        @media (max-width: $mobile-width) {
+            margin: 0;
+        }
+
+        &:hover {
+            .modules__desc {
+                animation-duration: 0.7s;
+                animation-delay: 0.5s;
+                animation-fill-mode: forwards;
+                animation-timing-function: ease-in;
+                animation-name: Flow;
+            }
+        }
+    }
+
+    &__desc {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        padding: rem(30);
+        width: rem(280);
+        height: rem(241);
+        font-size: 0;
+        line-height: 1.7;
+        background: radial-gradient(circle at top right, $color-first-1 50%, transparent 50%);
+        background-repeat: no-repeat;
+        background-size: 200% 200%;
+        background-position: 100% 0;
+        border-radius: rem(16);
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    &__name {
+        width: rem(210);
+        min-height: rem(60);
+        font-size: rem(20);
+        line-height: 1.4;
+        font-weight: 700;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        height: rem(110);
+        margin-top: auto;
+    }
+
+    &__cost {
+        flex: 1 0 auto;
+    }
+
+    &__cost-sum {
+        margin-bottom: rem(5);
+        font-size: rem(36);
+        line-height: 1;
+        color: $color-warning;
+        white-space: nowrap;
+    }
+
+    &__cost-period {
+        font-size: rem(16);
+        line-height: 1;
+        color: $color-info;
+        white-space: nowrap;
+    }
+
+    &__img {
+        flex: 0 1 auto;
+        max-width: rem(101);
+    }
+}
+    
+.modul-desc {
+
+    &__content {
+        padding: rem(40);
+        width: rem(800);
+
+        @media (max-width: $mobile-width) {
+            padding: rem(40) rem(20);
+            width: 100%;
+        }
+    }
+
+    &__title {
+        margin-bottom: rem(20);
+        font-size: rem(20);
+        line-height: 1.45;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    &__paragraf {
+        margin: rem(15) 0;
+        font-size: rem(14);
+        line-height: 1.5;
+    }
+
+    &__picture {
+        margin: rem(20) 0;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    }
+}

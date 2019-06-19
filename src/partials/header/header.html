@@ -1,0 +1,14 @@
+<header class="header {{className}}">
+    <div class="header__content content">
+        <input type="checkbox" class="header__menu-btn hidden-ctrl" id="open-menu">
+        <label for="open-menu" class="header__menu-label">
+            <img class="header__menu-btn-open" src="assets/img/header/menu-open.svg" alt="">
+            <img class="header__menu-btn-close" src="assets/img/header/menu-close.svg" alt="">
+        </label>
+        <a class="header__logo" href="#_">
+            <img class="header__logo-img" src="assets/img/header/logo-wikiworks.svg" alt="" width="200" height="32">
+        </a>
+        {{>main-nav className="header__menu"}}
+        {{>user-nav className="header__user"}}
+    </div>
+</header>

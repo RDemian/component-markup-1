@@ -1,0 +1,117 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: rem(10) 0;
+    background-color: #fff;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+
+    @media (max-width: $tablet-width) {
+        position: fixed;
+        top: 0;
+        z-index: 100;
+    }
+
+    @media (max-width: $mobile-width) {
+        padding: 0;
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-height: rem(56);
+
+        @media (max-width: $tablet-width) {
+            flex-direction: column;
+        }
+
+        @media (max-width: $mobile-width) {
+            min-height: rem(48);
+        }
+    }
+
+    &__menu-label {
+        display: none;
+        position: absolute;
+        top: rem(30);
+        left: rem(26);
+
+        @media (max-width: $tablet-width) {
+            display: block;
+            top: rem(23);
+        }
+
+        @media (max-width: $mobile-width) {
+            top: rem(17.5);
+            left: rem(16);
+        }
+
+        .header__menu-btn-close {
+            display: none;
+        }
+    }
+
+    &__menu-btn:checked + &__menu-label {
+        .header__menu-btn-open {
+            display: none;
+        }
+        .header__menu-btn-close {
+            display: block;
+            margin-top: rem(-7);
+            margin-left: rem(-7);
+            width: rem(37);
+        }
+    }
+
+    &__logo {
+        width: rem(200);
+        height: rem(32);
+
+        @media (max-width: $tablet-width) {
+            margin-top: rem(11);
+        }
+
+        @media (max-width: $mobile-width) {
+            margin-top: rem(12);
+            width: rem(145);
+            height: rem(20);
+        }
+    }
+
+    &__logo-img {
+        width: 100%;
+    }
+
+    &__menu {
+        margin: 0 auto;
+
+        @media (max-width: $tablet-width) {
+            display: none;
+            margin-top: rem(60);
+        }
+    }
+
+    &__user {
+        @media (max-width: $tablet-width) {
+            display: none;
+        }
+    }
+
+    &__menu-btn:checked ~ .header__menu {
+        display: flex;
+    }
+
+    &__menu-btn:checked ~ .header__user {
+        display: flex;
+    }
+
+    &__fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 101;
+    }
+}

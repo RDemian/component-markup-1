@@ -1,0 +1,22 @@
+.social {
+    display: flex;
+
+    &__item {
+        border-radius: 50%;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: rem(44);
+        height: rem(44);
+        border-radius: 50%;
+        background-color: #4A76A7;
+
+        &_fb {
+            margin-left: rem(36);
+            background-color: #4267B0;
+        }
+    }
+}

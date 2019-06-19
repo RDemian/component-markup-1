@@ -1,0 +1,77 @@
+<section class="tarif {{className}}">
+    <div class="tarif__content content">
+        <h2 class="tarif__title title">Тарифные планы для вашего бизнеса</h2>
+        <div class="tarif__subtitle">Стоимость зависит от числа сотрудников и места для хранения ваших файлов в облаке</div>
+
+        <ul class="tarif__nav js-tarif-nav-slider">
+            {{#each tarif-nav.items}}
+                <li class="tarif__nav-item">
+                    <input type="radio" id="tarif-nav-ctrl-{{@index}}" name="tarif-nav-ctrl" class="tarif__nav-ctrl data-group={{@index}} hidden-ctrl"
+                    {{#unless @index}}
+                        checked="checked"
+                    {{/unless}}>
+                    <label for="tarif-nav-ctrl-{{@index}}" class="tarif__nav-label">
+                        <div class="tarif__nav-period">{{period}}</div>
+                        <div class="tarif__nav-discount">{{discount}}</div>
+                    </label>
+                </li>
+            {{/each}}
+        </ul>
+
+        <div class="tarif__list-wrap">
+            <ul class="tarif__features">
+                {{#each tarif-features.items}}
+                    <li class="tarif__features-item">
+                        <img class="tarif__features-icon" src="{{icon-src}}" alt="">
+                        <div class="tarif__features-title">{{title}}</div>
+                        <div class="tarif__features-text">{{text}}</div>
+                    </li>
+                {{/each}}
+            </ul>
+            <div class="tarif__bloked">
+                <div class="tarif__blocked-desc">
+                    <div class="tarif__blocked-title">
+                        Бесплатно
+                    </div>
+                    <div class="tarif__blocked-text">
+                        до июля 2019 года
+                    </div>
+                </div>
+            </div>
+            <ul class="tarif__list js-tarif-slider">
+                {{#each tarif.items}}
+                    <li class="tarif__item">
+                        <div class="tarif__name">{{name}}</div>
+
+                        <div class="tarif__features-item tarif__features-item_mobile">
+                            <div class="tarif__features-title">Пользователи</div>
+                            <div class="tarif__features-text">которые могут работать с возможностями платформы</div>
+                        </div>
+                        <div class="tarif__users">{{users}}</div>
+
+                        <div class="tarif__features-item tarif__features-item_mobile">
+                            <div class="tarif__features-title">Облачное хранилище</div>
+                            <div class="tarif__features-text">для ваших файлов</div>
+                        </div>
+                        <div class="tarif__size">{{size}}</div>
+
+                        <div class="tarif__features-item tarif__features-item_mobile">
+                            <div class="tarif__features-title">Базовые модули</div>
+                            <div class="tarif__features-text">база знаний и документов, организационная структура, телефонный справочник, новости</div>
+                        </div>
+                        <div class="tarif__base">
+                            <img class="tarif__base-icon" src="{{icon-src}}" alt="">
+                        </div>
+                        
+                        <div class="tarif__cost-wrap">
+                            <div class="tarif__last-cost">{{lastCost}}</div>
+                            <div class="tarif__cost {{#unless period}}tarif__cost_small{{/unless}}">{{cost}}</div>
+                            <div class="tarif__period">{{period}}</div>
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,39 @@
+@charset 'utf-8';
+
+// Подключаем scss файлы из node_modules
+@import 'normalize/import-now';
+
+// Файлы для вёрстки
+@import 'global/variables';
+@import 'global/fonts';
+@import 'global/global';
+@import 'global/btn';
+@import 'global/modal';
+@import 'global/form';
+@import 'vendor/slick';
+//@import 'vendor/slick-theme';
+@import 'vendor/magnific-popup';
+
+// Компоненты
+@import '../../partials/header/header';
+@import '../../partials/main-nav/main-nav';
+@import '../../partials/user-nav/user-nav';
+@import '../../partials/promo/promo';
+@import '../../partials/why-wikiworks/why-wikiworks';
+@import '../../partials/what-wikiworks/what-wikiworks';
+@import '../../partials/look/look';
+@import '../../partials/tarif/tarif';
+@import '../../partials/modules/modules';
+@import '../../partials/blog-card/blog-card';
+@import '../../partials/blog-news/blog-news';
+@import '../../partials/blog-page/blog-page';
+@import '../../partials/blog-article/blog-article';
+@import '../../partials/pagination/pagination';
+@import '../../partials/taste/taste';
+@import '../../partials/connect/connect';
+@import '../../partials/social/social';
+@import '../../partials/footer/footer';
+@import '../../partials/modal-autorization/modal-autorization';
+@import '../../partials/terms-content/terms-content';
+@import '../../partials/comments/comments';
+// Страницы

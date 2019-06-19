@@ -1,0 +1,33 @@
+.terms-content {
+    padding: rem(50) 0 rem(80);
+
+    @media (max-width: $tablet-width) {
+        margin-top: rem(76);
+    }
+
+    @media (max-width: $mobile-width) {
+        margin-top: rem(48);
+    }
+
+    &__title {
+        text-align: left;
+        margin-bottom: rem(40);
+
+        @media (max-width: $tablet-width) {
+            text-align: center;
+        }
+    }
+    &__subtitle {
+        margin-top: rem(15);
+        margin-bottom: rem(30);
+        font-weight: 700;
+    }
+    &__paragraf {
+        margin-bottom: rem(30);
+        font-size: rem(16);
+        line-height: 1.7;
+    }
+    &__indent {
+        margin: rem(15) 0;
+    }
+}

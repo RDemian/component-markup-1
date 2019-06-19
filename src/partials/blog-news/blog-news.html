@@ -1,0 +1,15 @@
+<section class="blog-news {{className}}">
+    <div class="content">
+        <h2 class="blog-news__title title">Новое в блоге</h2>
+
+        <ul class="blog-news__list">
+            {{#each blog-news.items}}
+                <li class="blog-news__item">
+                    {{> blog-card title=title date=date text=text}}
+                </li>
+            {{/each}}
+        </ul>
+
+        <a href="#_" class="btn btn_second blog-news__all-btn">Все статьи</a>
+    </div>
+</section>

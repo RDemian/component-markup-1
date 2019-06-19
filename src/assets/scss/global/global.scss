@@ -1,0 +1,215 @@
+html {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: $text-first;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+img {
+    display: block;
+
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    font: inherit;
+    color: inherit;
+
+    border: 0;
+
+    outline: none;
+
+    background-color: transparent;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    color: $text-first;
+    font-size: rem(16);
+    font-weight: 500;
+}
+
+:focus {
+    outline: none;
+}
+
+//media variable
+$desktop-width: 1600px;
+$tablet-width: 1023px;
+$mobile-width: 667px;
+$desktop-height: 800px;
+
+html {
+    font-size: 16px;
+
+    &::before {
+        /* метка для js*/
+        content: '';
+        display: none;
+    }
+    
+    @media (max-width: $desktop-width) {
+        font-size: 16 / 1600 * 100vw;
+
+        @media (min-aspect-ratio: 1600/800) {
+            font-size: 16 / 800 * 100vh;
+        }
+
+        &::before {
+            /* метка для js*/
+            content: 'desktop';
+            display: none;
+        }
+    }
+
+    @media (max-width: $tablet-width) {
+        font-size: 16 / 800 * 100vw;
+        &::before {
+            /* метка для js*/
+            content: 'tablet';
+            display: none;
+        }
+    }
+
+    @media (max-width: $mobile-width) {
+        font-size: 16 / 320 * 100vw;
+        &::before {
+            /* метка для js*/
+            content: 'mobile';
+            display: none;
+        }
+    }
+}
+
+body {
+    font-family: "Museo Sans Cyrl 500", Arial, sans-serif;
+    font-weight: normal;
+}
+
+.main {
+    margin-top: rem(76);
+
+    @media (max-width: $mobile-width) {
+        margin-top: rem(48);
+    }
+}
+
+.d-none {
+    display: none !important;
+}
+
+.hidden-ctrl {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    padding: 0;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    border: 0;
+    overflow: hidden;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0 rem(210);
+    width: rem(1600);
+    max-width: 100%;
+
+    @media (max-width: $tablet-width) {
+        width: rem(800);
+        padding: 0 rem(26);
+    }
+
+    @media (max-width: $mobile-width) {
+        width: rem(320);
+        padding: 0 rem(16);
+    }
+}
+
+.title {
+    width: 100%;
+    font-size: rem(38);
+    line-height: 1.45;
+    font-weight: 500;
+    text-align: center;
+
+    @media (max-width: $tablet-width) {
+        font-size: rem(30);
+    }
+
+    @media (max-width: $mobile-width) {
+        font-size: rem(24);
+    }
+}
+
+.text-hlt {
+    color: $color-first-1;
+}
+
+.slider-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: rem(-20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    list-style: none;
+    
+    li {
+        margin: 0 rem(6);
+        font-size: 0;
+
+        button {
+            box-sizing: inherit;
+            display: block;
+            padding: 0;
+            width: rem(10);
+            height: rem(10);
+            border-radius: 50%;
+            font-size: 0;
+            background-color: $color-muted;
+        }
+    }
+
+    li.slick-active {
+        button {
+            background-color: $color-first-1;
+        }
+    }
+}
+
+.modules .slick-slider .slick-track, .modules .slick-slider .slick-list {
+    transform: none;
+}
