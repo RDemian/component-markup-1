@@ -33,7 +33,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.1",
-    "jquery-validation": "^1.19.0",
+    "jquery-validation": "^1.19.4",
     "panini": "^1.6.3",
     "uncss": "^0.16.2",
     "vinyl-named": "^1.1.0",
